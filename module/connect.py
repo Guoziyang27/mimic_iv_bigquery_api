@@ -6,7 +6,7 @@ BigQuery_client = []
 
 def connect():
     global BigQuery_client
-    launch_browser = True
+    launch_browser = False
 
     appflow = flow.InstalledAppFlow.from_client_secrets_file(
         "./client_secret.json", scopes=["https://www.googleapis.com/auth/bigquery"]

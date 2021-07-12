@@ -66,7 +66,7 @@ def chartevents_get():
         SELECT *
         FROM `physionet-data.mimic_icu.chartevents`
         WHERE itemid in ({})
-        LIMIT 100
+        LIMIT 10000
     """.format(','.join(item_id_list))
 
     query_results = BigQuery_client[0].query(name_group_query)
