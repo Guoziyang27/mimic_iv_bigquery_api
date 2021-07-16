@@ -41,13 +41,13 @@ def item_get():
     query_results = BigQuery_client[0].query(name_group_query)
 
     return json.dumps({'succeed': True,
-                       'item': retrive_query_result(query_results, with_header, d_item_header)})
+                       'content': retrive_query_result(query_results, with_header, d_item_header)})
 
 @icu.route('/itemheader', methods=['GET'])
 def item_get_header():
 
     return json.dumps({'succeed': True,
-                       'item_header': d_item_header})
+                       'header': d_item_header})
 
 @icu.route('/chartevents', methods=["GET"])
 def chartevents_get():
@@ -72,14 +72,14 @@ def chartevents_get():
     query_results = BigQuery_client[0].query(name_group_query)
 
     return json.dumps({'succeed': True,
-                       'item': retrive_query_result(query_results, with_header, chartevents_header)})
+                       'content': retrive_query_result(query_results, with_header, chartevents_header)})
 
 
 @icu.route('/charteventsheader', methods=['GET'])
 def chartevents_get_header():
 
     return json.dumps({'succeed': True,
-                       'item_header': chartevents_header})
+                       'header': chartevents_header})
 
 @icu.route('/datetimeevents', methods=["GET"])
 def datetimeevents_get():
@@ -103,13 +103,13 @@ def datetimeevents_get():
     query_results = BigQuery_client[0].query(name_group_query)
 
     return json.dumps({'succeed': True,
-                       'item': retrive_query_result(query_results, with_header, datetimeevents_header)})
+                       'content': retrive_query_result(query_results, with_header, datetimeevents_header)})
 
 @icu.route('/datetimeeventsheader', methods=['GET'])
 def datetimeevents_get_header():
 
     return json.dumps({'succeed': True,
-                       'item_header': datetimeevents_header})
+                       'header': datetimeevents_header})
 
 @icu.route('/icustays', methods=["GET"])
 def icustays_get():
@@ -133,13 +133,13 @@ def icustays_get():
     query_results = BigQuery_client[0].query(name_group_query)
 
     return json.dumps({'succeed': True,
-                       'item': retrive_query_result(query_results, with_header, icustays_header)})
+                       'content': retrive_query_result(query_results, with_header, icustays_header)})
 
 @icu.route('/icustaysheader', methods=['GET'])
 def icustays_get_header():
 
     return json.dumps({'succeed': True,
-                       'item_header': icustays_header})
+                       'header': icustays_header})
 
 @icu.route('/inputevents', methods=["GET"])
 def inputevents_get():
@@ -163,13 +163,13 @@ def inputevents_get():
     query_results = BigQuery_client[0].query(name_group_query)
 
     return json.dumps({'succeed': True,
-                       'item': retrive_query_result(query_results, with_header, inputevents_header)})
+                       'content': retrive_query_result(query_results, with_header, inputevents_header)})
 
 @icu.route('/inputeventsheader', methods=['GET'])
 def inputevents_get_header():
 
     return json.dumps({'succeed': True,
-                       'item_header': inputevents_header})
+                       'header': inputevents_header})
 
 @icu.route('/outputevents', methods=["GET"])
 def outputevents_get():
@@ -193,13 +193,13 @@ def outputevents_get():
     query_results = BigQuery_client[0].query(name_group_query)
 
     return json.dumps({'succeed': True,
-                       'item': retrive_query_result(query_results, with_header, outputevents_header)})
+                       'content': retrive_query_result(query_results, with_header, outputevents_header)})
 
 @icu.route('/outputeventsheader', methods=['GET'])
 def outputevents_get_header():
 
     return json.dumps({'succeed': True,
-                       'item_header': outputevents_header})
+                       'header': outputevents_header})
 
 @icu.route('/procedureevents', methods=["GET"])
 def procedureevents_get():
@@ -223,10 +223,10 @@ def procedureevents_get():
     query_results = BigQuery_client[0].query(name_group_query)
 
     return json.dumps({'succeed': True,
-                       'item': retrive_query_result(query_results, with_header, procedureevents_header)})
+                       'content': retrive_query_result(query_results, with_header, procedureevents_header)})
 
 @icu.route('/procedureeventsheader', methods=['GET'])
 def procedureevents_get_header():
 
     return json.dumps({'succeed': True,
-                       'item_header': procedureevents_header})
+                       'header': procedureevents_header})
